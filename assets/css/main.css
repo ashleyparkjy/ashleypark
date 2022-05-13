@@ -3103,6 +3103,7 @@ input, select, textarea {
 				border: 0;
 			}
 
+
 		#header nav {
 			font-family: Raleway, Helvetica, sans-serif;
 			font-size: 0.8em;
@@ -3115,6 +3116,18 @@ input, select, textarea {
 			text-transform: uppercase;
 			top: 0.7em;
 		}
+		
+			#header nav > ul {
+				padding: 0;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			
+			#header nav > ul > li {
+				float: left;
+			}
 
 			#header nav a {
 				border: 0;
@@ -3138,7 +3151,7 @@ input, select, textarea {
 					padding: 0 1.35em;
 				}
 
-					#header nav a[href="#menu"]:before {
+					#header nav a:before {
 						-moz-osx-font-smoothing: grayscale;
 						-webkit-font-smoothing: antialiased;
 						display: inline-block;
@@ -3156,11 +3169,11 @@ input, select, textarea {
 						line-height: inherit;
 					}
 
-					#header nav a[href="#menu"]:hover {
+					#header nav a:hover {
 						background-color: rgba(255, 255, 255, 0.025);
 					}
 
-					#header nav a[href="#menu"]:active {
+					#header nav li.active a {
 						background-color: rgba(255, 255, 255, 0.075);
 					}
 
@@ -3384,6 +3397,24 @@ input, select, textarea {
 		#banner .inner {
 			margin: 0 auto;
 			width: 55em;
+		}
+
+		#banner .image-column {
+			float: left;
+			width: 40%;
+			padding: 5px;
+		}
+
+		#banner .text-column {
+			float: left;
+			width: 60%;
+			padding: 5px;
+		}
+
+		#banner .row::after {
+			content: "";
+			clear: both;
+			display: table;
 		}
 
 		#banner .logo {
